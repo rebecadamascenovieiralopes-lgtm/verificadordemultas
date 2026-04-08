@@ -1,100 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
-<head> 
+<html lang="pt-BR">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Du Jour Chocolate</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Inter', sans-serif;
-    background: #050505;
+    background: #ffffff;
+    color: #111;
+}
+
+/* HERO */
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+    background: #111;
     color: #fff;
 }
 
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-}
-
 .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 64px;
-    letter-spacing: 2px;
+    font-size: 32px;
 }
 
 .hero p {
-    margin-top: 20px;
-    color: #aaa;
-    max-width: 500px;
+    margin: 15px 0;
+    color: #ccc;
 }
 
 .btn {
-    margin-top: 30px;
-    padding: 14px 40px;
-    border-radius: 50px;
-    background: linear-gradient(90deg, gold, #d4af37);
-    color: black;
-    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #d4af37;
+    color: #000;
     text-decoration: none;
-    transition: 0.3s;
+    border-radius: 6px;
+    font-weight: 600;
 }
 
-.btn:hover {
-    box-shadow: 0 0 20px gold;
-}
-
-.divider {
-    width: 80%;
-    height: 1px;
-    background: #222;
-    margin: 60px auto;
-}
-
-section {
-    max-width: 1000px;
-    margin: auto;
+/* SECTION */
+.section {
     padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
-h2 {
-    font-family: 'Playfair Display', serif;
+.section h2 {
     margin-bottom: 20px;
+    font-size: 22px;
 }
 
+/* SERVICES */
 .services {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
-.service {
+.card {
     padding: 20px;
-    border-bottom: 1px solid #222;
+    border: 1px solid #eee;
+    border-radius: 8px;
 }
 
-.service:hover {
-    color: gold;
+/* INFO */
+.info p {
+    margin-bottom: 8px;
+    color: #444;
 }
 
-.info {
-    color: #bbb;
-    line-height: 1.8;
-}
-
+/* FOOTER */
 .footer {
     text-align: center;
-    padding: 30px;
-    color: #666;
+    padding: 20px;
+    background: #111;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* DESKTOP */
+@media(min-width:768px){
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .services {
+        flex-direction: row;
+    }
+
+    .card {
+        flex: 1;
+    }
 }
 </style>
 </head>
@@ -102,61 +109,52 @@ h2 {
 <body>
 
 <div class="hero">
-    <h1>DU JOUR</h1>
-    <p>Refined Chocolate. Timeless Experience. Crafted for those who demand more.</p>
-    <a href="tel:1131682720" class="btn">Discover More</a>
+    <h1>Du Jour Chocolate</h1>
+    <p>Premium chocolate experience in São Paulo</p>
+    <a href="tel:1131682720" class="btn">Ligar Agora</a>
 </div>
 
-<div class="divider"></div>
-
-<section>
-    <h2>Signature Services</h2>
+<div class="section">
+    <h2>Principais Serviços</h2>
     <div class="services">
-        <div class="service">
-            <strong>Luxury Artisan Chocolates</strong><br>
-            Premium handcrafted selections with exceptional ingredients.
+        <div class="card">
+            <strong>Chocolates Artesanais</strong>
+            <p>Produtos premium feitos com ingredientes selecionados.</p>
         </div>
-        <div class="service">
-            <strong>Exclusive Events</strong><br>
-            Private tastings, curated experiences and high-end gatherings.
+        <div class="card">
+            <strong>Eventos</strong>
+            <p>Experiências exclusivas e degustações.</p>
         </div>
-        <div class="service">
-            <strong>Gourmet Lounge</strong><br>
-            A sophisticated space for indulgence and relaxation.
+        <div class="card">
+            <strong>Cafeteria</strong>
+            <p>Ambiente sofisticado com cafés e sobremesas.</p>
         </div>
     </div>
-</section>
+</div>
 
-<div class="divider"></div>
+<div class="section info">
+    <h2>Sobre a Empresa</h2>
+    <p>Du Jour Chocolate S.A.</p>
+    <p>CNPJ: 57.762.072/0005-17</p>
+    <p>Fundação: 2009</p>
+    <p>Capital: R$ 7.140.741,00</p>
+    <p>Status: Ativa</p>
+</div>
 
-<section class="info">
-    <h2>Company Information</h2>
-    Du Jour Chocolate S.A.<br>
-    CNPJ: 57.762.072/0005-17<br>
-    Founded: 2009<br>
-    Capital: R$ 7.140.741,00<br>
-    Status: Active
-</section>
+<div class="section info">
+    <h2>Localização</h2>
+    <p>Rua Haddock Lobo, 1415</p>
+    <p>São Paulo - SP</p>
+</div>
 
-<div class="divider"></div>
-
-<section class="info">
-    <h2>Location</h2>
-    Rua Haddock Lobo, 1415 - Jardins<br>
-    São Paulo - SP<br>
-    CEP: 01404-002
-</section>
-
-<div class="divider"></div>
-
-<section class="info">
-    <h2>Contact</h2>
-    Email: adm@chocolatdujour.com.br<br>
-    Phone: (11) 3168-2720
-</section>
+<div class="section info">
+    <h2>Contato</h2>
+    <p>Email: adm@chocolatdujour.com.br</p>
+    <p>Telefone: (11) 3168-2720</p>
+</div>
 
 <div class="footer">
-    © 2026 Du Jour Chocolate S.A.
+    © 2026 Du Jour Chocolate
 </div>
 
 </body>
